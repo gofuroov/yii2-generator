@@ -2,7 +2,7 @@
 
 namespace gofuroov\generator;
 
-use gofuroov\generator\generators\Generator;
+use gofuroov\generator\generators\crud\Generator;
 use Yii;
 use yii\base\Application;
 use yii\base\BootstrapInterface;
