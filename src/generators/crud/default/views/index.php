@@ -23,8 +23,7 @@ use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\w
 
 $this->title = <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>;
 $this->params['breadcrumbs'][] = $this->title;
-$this->params['create'] = Html::a(<?= $generator->generateString('<i class="fa fa-plus"></i> ' . Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>
-, ['create'], ['class' => 'btn btn-success'])
+$this->params['create'] = Html::a('<i class="fa fa-plus"></i>', ['create'], ['class' => 'btn btn-success'])
 ?>
 
 <div class="card">
