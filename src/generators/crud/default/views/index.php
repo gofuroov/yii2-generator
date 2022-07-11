@@ -29,7 +29,7 @@ $this->params['create'] = Html::a(<?= $generator->generateString('<i class="fa f
 
 <div class="card">
     <div class="card-body">
-        
+
         <?= $generator->enablePjax ? "    <?php Pjax::begin(); ?>\n" : '' ?>
         <?php if (!empty($generator->searchModelClass)): ?>
             <?= "    <?php " . ($generator->indexWidgetType === 'grid' ? "// " : "") ?>echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -64,9 +64,6 @@ $this->params['create'] = Html::a(<?= $generator->generateString('<i class="fa f
             ?>
             [
             'class' => ActionColumn::className(),
-            'urlCreator' => function ($action, <?= $modelClass ?> $model, $key, $index, $column) {
-            return Url::toRoute([$action, <?= $generator->generateUrlParams() ?>]);
-            }
             ],
             ],
             ]); ?>
