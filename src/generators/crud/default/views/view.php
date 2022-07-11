@@ -21,8 +21,9 @@ $this->title = $model-><?= $generator->getNameAttribute() ?>;
 $this->params['breadcrumbs'][] = ['label' => <?= $generator->generateString(Inflector::pluralize(Inflector::camel2words(StringHelper::basename($generator->modelClass)))) ?>, 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
-$this->params['update'] = Html::a(<?= $generator->generateString('Update') ?>, ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']);
-$this->params['delete'] = Html::a(<?= $generator->generateString('Delete') ?>, ['delete', <?= $urlParams ?>], [
+$this->params['update'] = Html::a('<i
+        class="fa fa-pencil"></i>', ['update', <?= $urlParams ?>], ['class' => 'btn btn-primary']);
+$this->params['delete'] = Html::a('<i class="fa fa-trash"></i>', ['delete', <?= $urlParams ?>], [
 'class' => 'btn btn-danger',
 'data' => [
 'confirm' => <?= $generator->generateString('Siz rostdan ham ushbu elementni o\'chirmoqchimisiz?') ?>,
