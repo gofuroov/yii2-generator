@@ -28,7 +28,7 @@ use yii\web\Controller;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class Generator extends \gofuroov\generator\Generator
+class Generator extends yii\gii\Generator
 {
     /**
      * @var string
